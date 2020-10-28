@@ -1,6 +1,6 @@
 {
   "name": "captcha-verifer",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Verification your ReCaptcha or HCaptcha is easy",
   "main": "app.js",
   "scripts": {
