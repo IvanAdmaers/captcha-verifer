@@ -1,0 +1,33 @@
+{
+  "name": "captcha-verifer",
+  "version": "0.0.1",
+  "description": "Verification your ReCaptcha or HCaptcha is easy",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Use it everywhere! It's the best captcha virefer in the world!\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IvanAdmaers/captcha-verifer.git"
+  },
+  "keywords": [
+    "recaptcha",
+    "hcaptcha",
+    "captcha",
+    "captcha-verifer",
+    "captcha",
+    "solver",
+    "node",
+    "captcha",
+    "node",
+    "recaptcha",
+    "node",
+    "hcaptcha"
+  ],
+  "author": "Ivan Admaers <iadmaers@icloud.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/IvanAdmaers/captcha-verifer/issues"
+  },
+  "homepage": "https://github.com/IvanAdmaers/captcha-verifer#readme"
+}
