@@ -16,9 +16,9 @@ class Captcha{
   static verifer({type, secretKey, token, ip}){
     return new Promise((resolve, reject)=>{
       //Params check
-      if(!type || !secretKey || !token) throw new Error('Some required params are empty');
+      if(!type || !secretKey || !token) reject('Some required params are empty');
 
-      if(type !== 'recaptcha' && type !== 'hcaptcha') throw new Error('Type of captcha is not known. It might be ReCaptcha of HCaptcha');
+      if(type !== 'recaptcha' && type !== 'hcaptcha') reject('Type of captcha is not known. It might be ReCaptcha of HCaptcha');
 
       const captchaHost = type === 'recaptcha' ? host.recaptcha : host.hcaptcha;
       const captchaPath = type === 'recaptcha' ? path.recaptcha : path.hcaptcha;
@@ -41,8 +41,8 @@ class Captcha{
         let buffer = '';
 
         res.on('error', reject)
-          .on('data', chunk => buffer += chunk)
-          .on('end', ()=>resolve(JSON.parse(buffer)));
+           .on('data', chunk => buffer += chunk)
+           .on('end', ()=>resolve(JSON.parse(buffer)));
 
       });
 
