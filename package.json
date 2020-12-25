@@ -1,6 +1,6 @@
 {
   "name": "captcha-verifer",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Verification your ReCaptcha or HCaptcha is easy",
   "main": "index.js",
   "scripts": {
@@ -15,14 +15,8 @@
     "hcaptcha",
     "captcha",
     "captcha-verifer",
-    "captcha",
-    "solver",
     "node",
-    "captcha",
-    "node",
-    "recaptcha",
-    "node",
-    "hcaptcha"
+    "captcha-verifier"
   ],
   "author": "Ivan Admaers <iadmaers@icloud.com>",
   "license": "MIT",

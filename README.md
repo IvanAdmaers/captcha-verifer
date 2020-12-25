@@ -1,5 +1,7 @@
 # captcha-verifer
 
+![Captcha Verifer](https://developers.google.com/recaptcha/images/newCaptchaAnchor.gif "Captcha Verifer package")
+
 Verification your ReCaptcha or HCaptcha is easy
 
 ## Advantages
@@ -24,43 +26,60 @@ const Captcha = require('captcha-verifer');
 
 ```javascript
 Captcha.verifer({
-  type: 'recaptcha', //Required (recaptcha or hcaptcha)
-  secretKey: 'superSecret', //Required
-  token: 'TOKEN (Captcha response)', //Required
-  ip: '192.109.0.0' //Optional
+  type: 'recaptcha', // Required (recaptcha or hcaptcha)
+  secretKey: 'superSecret', // Required
+  token: 'TOKEN (Captcha response)', // Required
+  ip: '	47.16.0.0' // Optional
 })
-.then(data=>{
-  if(!data.success) return; //Captcha not solved
+.then(data => {
+  if (!data.success) return; // Captcha not solved
 
   /* All good. There is your super code! */
 })
-.catch(e=>console.log(e));
+.catch(e => console.log(e));
 ```
 
 Or
 
 ```javascript
-(async ()=>{
-  try{
+(async () => {
+  try {
     const captcha = await Captcha.verifer({
-      type: 'hcaptcha', //Required (recaptcha or hcaptcha)
-      secretKey: 'superSecret', //Required
-      token: 'TOKEN (Captcha response)', //Required
-      ip: '192.109.0.0' //Optional
+      type: 'hcaptcha', // Required (recaptcha or hcaptcha)
+      secretKey: 'superSecret', // Required
+      token: 'TOKEN (Captcha response)', // Required
+      ip: '47.16.0.0' // Optional
     });
 
-    if(!captcha.success) return; //Captcha not solved
-    
+    if (!captcha.success) return; // Captcha not solved
+
     /* Your perfect code here */
-  } catch(e){
+  } catch (e) {
     console.log(e);
   }
-  
 })();
 ```
 
-## Contributing
-Any ideas? Contact with me by email iadmaers@icloud.com
+You can also verify recaptcha 3
+
+```javascript
+Captcha.verifer({
+  type: 'recaptcha', // Required (recaptcha or hcaptcha)
+  secretKey: 'superSecret', // Required
+  token: 'TOKEN (Captcha response)', // Required
+  ip: '	47.16.0.0' //Optional
+})
+.then(data => {
+  if (!data.success || data.score <= 0.3) return; // Captcha not solved
+
+  /* Pefect. Go ahead */
+})
+.catch(e => console.log(e));
+```
+
+---
+
+## From the author
 
 Have a nice day!
 
