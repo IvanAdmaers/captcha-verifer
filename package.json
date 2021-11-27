@@ -4,7 +4,7 @@
   "description": "Verification your ReCaptcha or HCaptcha is easy",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Use it everywhere! It's the best captcha virefer in the world!\""
+    "test": "jest"
   },
   "repository": {
     "type": "git",
