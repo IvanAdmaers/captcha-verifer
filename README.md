@@ -29,14 +29,14 @@ Captcha.verifer({
   type: 'recaptcha', // Required (recaptcha or hcaptcha)
   secretKey: 'superSecret', // Required
   token: 'TOKEN (Captcha response)', // Required
-  ip: '	47.16.0.0' // Optional
+  ip: '47.16.0.0' // Optional
 })
-.then(data => {
-  if (!data.success) return; // Captcha not solved
+.then((captcha) => {
+  if (!captcha.success) return; // Captcha not solved
 
   /* All good. There is your super code! */
 })
-.catch(e => console.log(e));
+.catch((e) => console.log(e));
 ```
 
 Or
@@ -67,21 +67,17 @@ Captcha.verifer({
   type: 'recaptcha', // Required (recaptcha or hcaptcha)
   secretKey: 'superSecret', // Required
   token: 'TOKEN (Captcha response)', // Required
-  ip: '	47.16.0.0' //Optional
+  ip: '47.16.0.0' //Optional
 })
-.then(data => {
-  if (!data.success || data.score <= 0.3) return; // Captcha not solved
+.then((captcha) => {
+  if (!captcha.success || captcha.score <= 0.3) return; // Captcha not solved
 
   /* Pefect. Go ahead */
 })
-.catch(e => console.log(e));
+.catch((e) => console.log(e));
 ```
 
 ---
-
-## From the author
-
-Have a nice day!
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
