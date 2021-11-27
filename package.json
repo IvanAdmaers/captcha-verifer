@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/IvanAdmaers/captcha-verifer/issues"
   },
-  "homepage": "https://github.com/IvanAdmaers/captcha-verifer#readme"
+  "homepage": "https://github.com/IvanAdmaers/captcha-verifer#readme",
+  "devDependencies": {
+    "jest": "^27.3.1"
+  }
 }
