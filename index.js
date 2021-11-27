@@ -1,5 +1,6 @@
 const https = require('https');
-const querystring = require('querystring');
+
+const { stringifyParams } = require('./utills');
 
 const host = {
   recaptcha: 'www.google.com',
@@ -26,12 +27,14 @@ class Captcha {
       const captchaHost = type === 'recaptcha' ? host.recaptcha : host.hcaptcha;
       const captchaPath = type === 'recaptcha' ? path.recaptcha : path.hcaptcha;
 
-      // Request
-      const requestData = querystring.stringify({
+      const params = {
         secret: secretKey,
         response: token,
         remoteip: ip,
-      });
+      };
+
+      // Request
+      const requestData = stringifyParams(params);
 
       const options = {
         hostname: captchaHost,
